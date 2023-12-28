@@ -17,9 +17,9 @@
               image: nithyaks/flask-docker-demo-app:v1
               resources:
                 limits:
-                  memory: "4Gi"
-                  cpu: "1000m"
-                requests:
                   memory: "2Gi"
                   cpu: "500m"
+                requests:
+                  memory: "1Gi"
+                  cpu: "200m"
 
