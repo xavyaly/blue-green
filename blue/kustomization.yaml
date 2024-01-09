@@ -2,6 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1
 kind: Kustomization
 resources:
 
-– deploy.yaml
+– deploy.yml
 - load.yml
 
