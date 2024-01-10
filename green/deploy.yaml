@@ -14,7 +14,7 @@
         spec:
           containers:
             - name: python-app1
-              image: nithyaks/flask-docker-demo-app:v2
+              image: nithyaks/flask-docker-demo-app:v1
               resources:
                 limits:
                   memory: "4Gi"
