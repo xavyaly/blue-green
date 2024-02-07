@@ -13,8 +13,13 @@
             app: python-flask1
         spec:
           containers:
+<<<<<<< HEAD:blue/deploy.yml
+            - name: python-app
+              image: nithyaks/python-flask-demo:ver1
+=======
             - name: python-app1
-              image: nithyaks/flask-docker-demo-app:v2
+              image: nithyaks/flask-docker-demo-app:v1
+>>>>>>> 9f759262a01fdbb1cfe2e6cc4ea0baa30f9036d9:green/deploy.yaml
               resources:
                 limits:
                   memory: "4Gi"
