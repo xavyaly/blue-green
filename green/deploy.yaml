@@ -1,30 +1,24 @@
-    apiVersion: apps/v1
-    kind: Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-flask1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-flask1
+  template:
     metadata:
-      name: python-flask1
+      labels:
+        app: python-flask1
     spec:
-      replicas: 1
-      selector:
-        matchLabels:
-            app: python-flask1
-      template:
-        metadata:
-          labels:
-            app: python-flask1
-        spec:
-          containers:
-<<<<<<< HEAD:blue/deploy.yml
-            - name: python-app
-              image: nithyaks/python-flask-demo:ver1
-=======
-            - name: python-app1
-              image: nithyaks/flask-docker-demo-app:v1
->>>>>>> 9f759262a01fdbb1cfe2e6cc4ea0baa30f9036d9:green/deploy.yaml
-              resources:
-                limits:
-                  memory: "4Gi"
-                  cpu: "1000m"
-                requests:
-                  memory: "2Gi"
-                  cpu: "500m"
-
+      containers:
+        - name: python-app1
+          image: nithyaks/python-flask-demo:ver2
+          resources:
+            limits:
+              memory: "2Gi"
+              cpu: "500m"
+            requests:
+              memory: "1Gi"
+              cpu: "200m"
